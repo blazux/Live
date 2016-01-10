@@ -1,8 +1,9 @@
-# Live
-Blazux Live CD, just for fun, just for me !
+# Hello
+Blazux Live CD is just a test, DON'T USE IT ! Seriously, just don't.
 
-Hello,
+If you're still reading :
+ - it's just a modified version of the Arch Linux install disk, if you want to install Arch Linux use the official disk not Blazux. 
+ - it comes with a bunch of software related to security, if you want to perform some pentest, use Kali not Blazux.
+ - it also comes with a lot of media related softwares, if you want to listen to music with a live CD use Ubuntu (or anything else) not Blazux.
 
-Ce repository git est juste un test, utilisé pour un live CD qui n'est lui aussi, qu'un test.
 
-DON'T USE IT, EVEN AT YOUR OWN RISK !!!!

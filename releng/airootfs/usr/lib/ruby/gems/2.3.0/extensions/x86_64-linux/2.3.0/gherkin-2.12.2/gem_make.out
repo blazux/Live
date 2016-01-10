@@ -1,0 +1,25 @@
+current directory: /tmp/bundler20160110-896-axt5n0gherkin-2.12.2/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+/usr/bin/ruby -r ./siteconf20160110-896-dg15s1.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /tmp/bundler20160110-896-axt5n0gherkin-2.12.2/extensions/x86_64-linux/2.3.0/gherkin-2.12.2/mkmf.log
+
+current directory: /tmp/bundler20160110-896-axt5n0gherkin-2.12.2/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20160110-896-axt5n0gherkin-2.12.2/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+make "DESTDIR="
+compiling gherkin_lexer_zh_tw.c
+In file included from /usr/include/assert.h:35:0,
+                 from ragel/i18n/zh_tw.c.rl:1:
+/usr/include/features.h:328:4: attention : #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+ #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+    ^
+linking shared-object gherkin_lexer_zh_tw.so
+
+current directory: /tmp/bundler20160110-896-axt5n0gherkin-2.12.2/gems/gherkin-2.12.2/ext/gherkin_lexer_zh_tw
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gherkin_lexer_zh_tw.so ./.gem.20160110-896-gdvwos

@@ -1,0 +1,7 @@
+*.gem
+doc/
+pkg/
+test/*test.pcap
+Gemfile.lock
+.ruby-gemset*
+.ruby-version*

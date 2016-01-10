@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-mixer" version="1.0">
+  <property name="sound-card" type="string" value="HDAudioGenericAlsamixer"/>
+  <property name="sound-cards" type="empty">
+    <property name="HDAudioGenericAlsamixer" type="array">
+      <value type="string" value="Volume général"/>
+      <value type="string" value="Headphone"/>
+      <value type="string" value="Speaker"/>
+    </property>
+  </property>
+  <property name="window-height" type="int" value="400"/>
+  <property name="window-width" type="int" value="640"/>
+</channel>

@@ -1,0 +1,13 @@
+addons:
+  postgresql: '9.3'
+before_install:
+  # graphviz for yard-metasploit-erd
+  - sudo apt-get install graphviz
+before_script:
+  - cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml
+  - bundle exec rake db:setup
+cache: bundler
+language: ruby
+rvm:
+  - 2.1
+script: bundle exec rake spec yard

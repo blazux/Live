@@ -1,0 +1,12 @@
+addons:
+  postgresql: '9.3'
+cache: bundler
+language: ruby
+rvm:
+  - '2.1'
+  # < 1.7.14
+  - 'jruby-1.7.13'
+  # >= 1.7.14
+  - 'jruby-1.7.14'
+script: bundle exec rake spec yard
+sudo: false

@@ -1,0 +1,11 @@
+/usr/bin/ruby -r ./siteconf20150817-1976-zfdnz7.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling pg_array_parser.c
+linking shared-object pg_array_parser/pg_array_parser.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 pg_array_parser.so ./.gem.20150817-1976-1itk7tb/pg_array_parser

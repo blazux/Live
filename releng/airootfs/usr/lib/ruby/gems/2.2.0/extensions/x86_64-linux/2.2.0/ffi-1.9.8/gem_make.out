@@ -1,0 +1,56 @@
+/usr/bin/ruby -r ./siteconf20150817-1976-1d5tp5u.rb extconf.rb
+checking for ffi_call() in -lffi... yes
+checking for ffi_prep_closure()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... yes
+creating extconf.h
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling ffi.c
+compiling Variadic.c
+compiling Types.c
+compiling Type.c
+compiling Thread.c
+compiling StructLayout.c
+compiling StructByValue.c
+compiling StructByReference.c
+compiling Struct.c
+compiling Pointer.c
+compiling Platform.c
+compiling MethodHandle.c
+compiling MemoryPointer.c
+compiling MappedType.c
+compiling LongDouble.c
+compiling LastError.c
+compiling FunctionInfo.c
+compiling Function.c
+Function.c: Dans la fonction ‘async_cb_event’:
+Function.c:563:9: attention : implicit declaration of function ‘rb_thread_call_without_gvl’ [-Wimplicit-function-declaration]
+         rb_thread_call_without_gvl(async_cb_wait, &w, async_cb_stop, &w);
+         ^
+compiling DynamicLibrary.c
+compiling DataConverter.c
+compiling ClosurePool.c
+compiling Call.c
+In file included from Call.c:62:0:
+Call.c: Dans la fonction ‘do_blocking_call’:
+Thread.h:78:39: attention : implicit declaration of function ‘rb_thread_call_without_gvl’ [-Wimplicit-function-declaration]
+ # define rbffi_thread_blocking_region rb_thread_call_without_gvl
+                                       ^
+Call.c:368:5: note: in expansion of macro ‘rbffi_thread_blocking_region’
+     rbffi_thread_blocking_region(call_blocking_function, data, (void *) -1, NULL);
+     ^
+compiling Buffer.c
+compiling ArrayType.c
+compiling AbstractMemory.c
+linking shared-object ffi_c.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20150817-1976-147zgwg

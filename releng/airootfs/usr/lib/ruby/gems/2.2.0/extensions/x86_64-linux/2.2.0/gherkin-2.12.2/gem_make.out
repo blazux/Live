@@ -1,0 +1,17 @@
+/usr/bin/ruby -r ./siteconf20150817-1976-apbcpj.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling gherkin_lexer_zh_tw.c
+In file included from /usr/include/assert.h:35:0,
+                 from ragel/i18n/zh_tw.c.rl:1:
+/usr/include/features.h:328:4: attention : #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+ #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+    ^
+linking shared-object gherkin_lexer_zh_tw.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gherkin_lexer_zh_tw.so ./.gem.20150817-1976-1hbln2n

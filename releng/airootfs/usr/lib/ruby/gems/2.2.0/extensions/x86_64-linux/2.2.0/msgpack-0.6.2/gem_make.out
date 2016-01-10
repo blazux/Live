@@ -1,0 +1,28 @@
+/usr/bin/ruby -r ./siteconf20150817-1976-1v8bc3j.rb extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... yes
+checking for rb_str_replace() in ruby.h... yes
+checking for rb_intern_str() in ruby.h... yes
+checking for rb_sym2str() in ruby.h... yes
+checking for rb_str_intern() in ruby.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling unpacker_class.c
+unpacker_class.c:197:14: attention : ‘Unpacker_peek_next_type’ defined but not used [-Wunused-function]
+ static VALUE Unpacker_peek_next_type(VALUE self)
+              ^
+compiling unpacker.c
+compiling rmem.c
+compiling rbinit.c
+compiling packer_class.c
+compiling packer.c
+compiling core_ext.c
+compiling buffer_class.c
+compiling buffer.c
+linking shared-object msgpack/msgpack.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20150817-1976-15e8fex/msgpack

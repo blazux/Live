@@ -1,0 +1,9 @@
+/usr/bin/ruby -r ./siteconf20150817-1976-qwns6r.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: rien à faire pour « all ».
+
+make "DESTDIR=" install

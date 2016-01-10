@@ -1,0 +1,16 @@
+/usr/bin/ruby -r ./siteconf20150817-1976-1p84p7s.rb extconf.rb
+
+[*] Running checks for pcaprub_c code...
+platform is x86_64-linux
+checking for pcap_open_live() in -lpcap... yes
+checking for pcap_setnonblock() in -lpcap... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling pcaprub.c
+linking shared-object pcaprub_c.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 pcaprub_c.so ./.gem.20150817-1976-b36uyd

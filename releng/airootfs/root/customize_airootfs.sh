@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "AU LANCEMENT LE USER EST :"
-echo $HOME
-
 set -e -u
 
 #sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
@@ -42,7 +39,7 @@ systemctl enable postgresql.service
 
 #systemctl start postgresql.service
 
-export PATH=/root/.gem/ruby/2.2.0/bin:$PATH
+export PATH=/root/.gem/ruby/2.3.0/bin:$PATH
 
 chown -R blaz:users /home/blaz
 chown -R blaz:users /opt/metasploit-framework

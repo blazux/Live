@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=/home/blaz/.gem/ruby/2.2.0/bin:$PATH
+export PATH=/home/blaz/.gem/ruby/2.3.0/bin:$PATH
 
 echo "BUILDAGE DE L'ENVIRONNEMENT POUR :"
 echo $USER

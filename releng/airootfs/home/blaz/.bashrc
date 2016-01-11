@@ -7,4 +7,4 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
-export PATH="/home/blaz/.gem/ruby/2.2.0/bin:$PATH"
+export PATH="/home/blaz/.gem/ruby/2.3.0/bin:$PATH"

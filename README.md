@@ -1,6 +1,6 @@
 # Hello fellow linux user !
 
-Blazux Live CD is just a test, DON'T USE IT ! Seriously, just don't.
+Blazux Live CD is just made for fun, DON'T USE IT ! Seriously, just don't.
 
 If you're still reading :
  - it's just a modified version of the Arch Linux install disk, if you want to install Arch Linux use the official disk not Blazux. 

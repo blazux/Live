@@ -1,0 +1,24 @@
+current directory: /tmp/bundler20160302-1333-ycmglwpcaprub-0.12.1/gems/pcaprub-0.12.1/ext/pcaprub_c
+/usr/bin/ruby -r ./siteconf20160302-1333-1ufxbwm.rb extconf.rb
+
+[*] Running checks for pcaprub_c code...
+platform is x86_64-linux
+checking for pcap_open_live() in -lpcap... yes
+checking for pcap_setnonblock() in -lpcap... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /tmp/bundler20160302-1333-ycmglwpcaprub-0.12.1/extensions/x86_64-linux/2.3.0/pcaprub-0.12.1/mkmf.log
+
+current directory: /tmp/bundler20160302-1333-ycmglwpcaprub-0.12.1/gems/pcaprub-0.12.1/ext/pcaprub_c
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20160302-1333-ycmglwpcaprub-0.12.1/gems/pcaprub-0.12.1/ext/pcaprub_c
+make "DESTDIR="
+compiling pcaprub.c
+linking shared-object pcaprub_c.so
+
+current directory: /tmp/bundler20160302-1333-ycmglwpcaprub-0.12.1/gems/pcaprub-0.12.1/ext/pcaprub_c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 pcaprub_c.so ./.gem.20160302-1333-gaat9n

@@ -1,0 +1,59 @@
+have_library: checking for pcap_open_live() in -lpcap... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -I/opt/local/include -I/usr/local/include -I/usr/include -I/usr/include -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L/opt/local/lib -L/usr/local/lib -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -I/opt/local/include -I/usr/local/include -I/usr/include -I/usr/include -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L/opt/local/lib -L/usr/local/lib -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby -lpcap  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <pcap.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))pcap_open_live; return !p; }
+/* end */
+
+--------------------
+
+have_library: checking for pcap_setnonblock() in -lpcap... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -I/opt/local/include -I/usr/local/include -I/usr/include -I/usr/include -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L/opt/local/lib -L/usr/local/lib -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic    -lpcap  -lruby -lpcap -lpcap  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <pcap.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))pcap_setnonblock; return !p; }
+/* end */
+
+--------------------
+

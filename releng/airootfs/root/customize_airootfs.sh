@@ -52,9 +52,10 @@ echo "moving to msf folder"
 cd /opt/metasploit-framework
 bash -c 'for MSF in $(ls msf*); do ln -s /opt/metasploit-framework/$MSF /usr/sbin/$MSF;done'
 
-#echo "CONFIG USER POSTGRESQL :"
-#sudo -u postgres createuser msf -P -S -R -D
-#sudo -u postgres createdb -O msf test
+echo "CONFIG USER+BASE POSTGRESQL :"
+su - postgres -c "initdb --locale fr_FR.UTF-8 -D '/var/lib/postgres/data'"
+su - postgres -c "createuser msf -P -S -R -D"
+su - postgres -c "createdb -O msf msf"
 
 echo "CREATION DU FICHIER DE CONFIG DATABASE.YML :"
 
@@ -62,7 +63,7 @@ echo "production:" >> /opt/metasploit-framework/config/database.yml
 echo " adapter: postgresql" >> /opt/metasploit-framework/config/database.yml
 echo " database: msf" >> /opt/metasploit-framework/config/database.yml
 echo " username: msf" >> /opt/metasploit-framework/config/database.yml
-echo " password: " >> /opt/metasploit-framework/config/database.yml
+echo " password: msf" >> /opt/metasploit-framework/config/database.yml
 echo " host: 127.0.0.1" >> /opt/metasploit-framework/config/database.yml
 echo " port: 5432" >> /opt/metasploit-framework/config/database.yml
 echo " pool: 75" >> /opt/metasploit-framework/config/database.yml

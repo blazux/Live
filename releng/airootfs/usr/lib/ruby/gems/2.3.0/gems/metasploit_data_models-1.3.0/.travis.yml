@@ -1,0 +1,17 @@
+addons:
+  postgresql: '9.5'
+group: stable
+sudo: false
+cache: bundler
+addons:
+  apt:
+    packages:
+      - graphviz
+language: ruby
+rvm:
+  - 2.2.4
+before_script:
+  - cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml
+  - bundle exec rake --version
+  - bundle exec rake db:create db:migrate
+script: bundle exec rake spec yard

@@ -1,0 +1,7 @@
+#/bin/bash
+
+#Needed database configuration for msf & armitage
+su - postgres -c "initdb --locale fr_FR.UTF-8 -D '/var/lib/postgres/data'"
+systemctl restart postgresql.service
+su - postgres -c "createuser msf -P -S -R -D -W msf"
+su - postgres -c "createdb -O msf msf"
